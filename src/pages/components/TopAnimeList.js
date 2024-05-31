@@ -7,9 +7,9 @@ export default function TopAnimeList({api}){
         {api.map((anime)=>{
             return(
                 // eslint-disable-next-line react/jsx-key
-                <Link href={`/${anime.mal_id}`} className="relative cursor-pointer">
+                <Link href={`/${anime.mal_id}`} className="relative cursor-pointer hover:scale-[103%]">
                     <Image src={anime.images.webp.image_url} alt={anime.title} width={300} height={600} className="block w-full object-cover min-h-20 max-h-64"/>
-                    <h1 className="font-bold text-sm absolute bottom-0 left-0 p-[10px] bg-black/50 text-center w-[100%] max-h-32 h-14 overflow-hidden">{anime.title}</h1> 
+                    <h1 className="font-bold text-sm absolute bottom-0 left-0 p-[10px] bg-black/50 text-center w-[100%] max-h-32 h-14 overflow-hidden ">{anime.title}</h1> 
                 </Link>
                 )
             })
