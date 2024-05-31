@@ -1,5 +1,5 @@
 ## About This Project
-final project of Pelatihan 2 WebDev KMTETI, creating a web using Next.js and Tailwind CSS by utilizing public APIs.
+Final project of Pelatihan 2 WebDev KMTETI, creating a web using Next.js and Tailwind CSS by utilizing public APIs.
 
 
 ## Getting Started
