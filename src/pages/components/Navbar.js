@@ -7,10 +7,10 @@ export default function Navbar(){
                 <Link href="/" className="text-4xl font-medium">
                     NIMANIME
                 </Link>
-                <nav className="md:flex hidden text-xl space-x-8" aria-label="main">
-                    <h1>Home</h1>
-                    <h1>Anime List</h1>
-                    <h1>Jadwal</h1>
+                <nav className="md:flex hidden text-xl space-x-8 cursor-pointer" aria-label="main">
+                    <Link href="/">Home</Link>
+                    <Link href="/List">Anime List</Link>
+                    <Link href="/Jadwal">Jadwal</Link>
                     <input placeholder=" Cari Anime..." type="text" className="text-black rounded-md"/>
                 </nav>
             </section>

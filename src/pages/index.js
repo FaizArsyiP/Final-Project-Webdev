@@ -1,15 +1,16 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Animelist from "./components/Animelist"
-import Navbar from "./components/Navbar"
+import TopAnimeList from "./components/TopAnimeList"
+import Header from "./components/Header"
+
 
 export default function Home(){
-  const [anime,setAnime] = useState([])
+  const [topAnime,setTopAnime] = useState([])
+  
   useEffect(()=>{
-    axios.get("https://api.jikan.moe/v4/top/anime?limit=12")
+    axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=12`)
     .then((res)=>{
-      console.log(res.data)
-      setAnime(res.data.data)
+      setTopAnime(res.data.data)
       })
     .catch((err)=>{
       console.log(err)
@@ -18,19 +19,8 @@ export default function Home(){
 
   return(
     <>
-    <Navbar/>
-    <h1 className="text-3xl m-auto max-w-4xl p-4 font-bold ">Paling Populer</h1>
-    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 max-w-4xl m-auto px-4 pb-4">
-      {anime.map(data => {
-        return (
-          // eslint-disable-next-line react/jsx-key
-          <div key={data.mal_id} className="shadow-xl">
-            <Animelist title={data.title} image={data.images.webp.image_url} id={data.mal_id} />
-          </div>
-        
-      )
-      })}
-    </div>
+      <><Header title="Paling Populer" href="/populer" />
+      <TopAnimeList api={topAnime} /></>
     </>
     )
 }
