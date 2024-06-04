@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.2.1",
+    "@phosphor-icons/react": "^2.1.5-alpha.3",
+    "@types/react-router": "^5.1.20",
     "axios": "^1.7.2",
     "next": "14.2.3",
     "react": "^18",
